@@ -1,0 +1,11 @@
+query FindBeerQuery($beerName: String!) {
+  findBeer(filter: {beerName: $beerName}) {
+        beerName
+        beerID
+        description
+        picture
+        category{
+            categoryName
+        }
+  }
+}

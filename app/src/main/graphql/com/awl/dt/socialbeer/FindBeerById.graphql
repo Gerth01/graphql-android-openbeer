@@ -1,0 +1,30 @@
+query FindBeerByIdQuery($beerId: Int!) {
+  findBeer(filter: {beerID: $beerId}) {
+        beerID
+        beerName
+        abv
+        description
+        picture
+        brewery {
+            breweryName
+            address1
+            city
+            state
+            zipCode
+            country
+            phoneNumber
+            website
+            description
+            geocode {
+              latitude
+              longitude
+            }
+        }
+        category {
+            categoryName
+        }
+        style {
+            styleName
+        }
+  }
+}

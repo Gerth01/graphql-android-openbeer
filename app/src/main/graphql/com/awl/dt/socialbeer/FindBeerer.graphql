@@ -1,0 +1,34 @@
+query FindBeererByID($beererId: Int!) {
+
+    findBeererById(beererID: $beererId) {
+    beererName
+    picture
+    description
+    rated(first: 5) {
+      beer {
+        beerName
+        picture
+      }
+      rate {
+        rating
+        comment
+      }
+    }
+    checked(first: 5) {
+      beer {
+        beerName
+      }
+      check {
+        location
+      }
+    }
+    friends(first: 5) {
+      friend {
+        beererName
+      }
+      friendship {
+        since
+      }
+    }
+  }
+}

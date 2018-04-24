@@ -1,0 +1,3 @@
+mutation RateBeerMutation($me: Int!, $beerId: Int!, $rating: Int!, $comment : String!) {
+    rate(input: {me: $me, beerID: $beerId, rating: $rating, comment: $comment})
+}
